@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".klakulator"
+    android:background="@drawable/bg"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+
+    <ImageView
+        android:layout_width="99dp"
+        android:layout_height="99dp"
+        android:layout_gravity="center"
+        android:src="@drawable/clct" />
+
+    <EditText
+        android:id="@+id/txtpertama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Masukkan angka pertama"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/txtkedua"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="masukkan angka kedua"
+        android:inputType="number" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="145dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnplus"
+            android:layout_width="204dp"
+            android:layout_height="142dp"
+            android:text="+"
+            android:textSize="89px" />
+
+        <Button
+            android:id="@+id/btnmin"
+            android:layout_width="195dp"
+            android:layout_height="142dp"
+            android:text="-"
+            android:textSize="89px" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btnkali"
+
+            android:layout_width="205dp"
+            android:layout_height="142dp"
+            android:text="x"
+            android:textSize="89px" />
+
+        <Button
+            android:id="@+id/btnbagi"
+            android:layout_width="195dp"
+            android:layout_height="142dp"
+            android:text=":"
+            android:textSize="89px" />
+
+    </LinearLayout>
+
+    <TextView
+        android:gravity="center"
+        android:id="@+id/tvhasil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="hasil" />
+</LinearLayout>

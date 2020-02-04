@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".MainActivity"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<Space
+    android:layout_width="match_parent"
+    android:layout_height="80dp"/>
+
+    <ImageView
+        android:layout_width="219dp"
+        android:layout_height="197dp"
+        android:layout_gravity="center"
+        android:src="@drawable/clct" />
+
+    <EditText
+        android:inputType="textEmailAddress"
+        android:id="@+id/txtemail"
+        android:layout_gravity="center"
+        android:layout_width="288dp"
+        android:layout_height="wrap_content"
+        android:hint="Masukkan Email"
+        android:textColorHint="#FFFF" />
+
+    <EditText
+        android:inputType="textPassword"
+        android:textColor="#FFFF"
+        android:id="@+id/txtpassword"
+        android:layout_width="288dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:hint="Masukkan Password"
+        android:textColorHint="#FFFF"
+        tools:ignore="MissingPrefix" />
+
+    <Button
+        android:id="@+id/angry_btn"
+        android:layout_width="280dp"
+
+        android:layout_height="57dp"
+        android:layout_gravity="center"
+        android:background="@drawable/button"
+
+        android:shadowColor="#FFFF"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"
+        android:text="Log In"
+        android:textColor="#FFFF"
+        android:textSize="30sp" />
+
+    <TextView
+        android:layout_gravity="center"
+        android:id="@+id/tvhasil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Forgot your password?" />
+
+</LinearLayout>
