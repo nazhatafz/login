@@ -2,6 +2,8 @@ package com.example.login;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -10,10 +12,11 @@ import android.widget.TextView;
 
 public class klakulator extends AppCompatActivity implements View.OnClickListener{
     EditText txtpertama, txtkedua;
-    Button btnplus, btnmin, btnkali, btnbagi;
+    Button btnplus, btnmin, btnkali, btnbagi,btnlogout;
     TextView tvhasil;
     Integer angka1, angka2;
     String aangka1, aangka2;
+    static SharedPreferences sharedPreferences;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,6 +26,7 @@ public class klakulator extends AppCompatActivity implements View.OnClickListene
         btnplus = findViewById(R.id.btnplus);
         btnmin = findViewById(R.id.btnmin);
         btnkali = findViewById(R.id.btnkali);
+        btnlogout = findViewById(R.id.btnlogout);
         btnbagi = findViewById(R.id.btnbagi);
         tvhasil = findViewById(R.id.tvhasil);
 
@@ -31,6 +35,7 @@ public class klakulator extends AppCompatActivity implements View.OnClickListene
        btnmin.setOnClickListener(this);
        btnkali.setOnClickListener(this);
        btnbagi.setOnClickListener(this);
+       btnlogout.setOnClickListener(this);
 
 
     }
@@ -67,7 +72,13 @@ public class klakulator extends AppCompatActivity implements View.OnClickListene
                 angka2 = Integer.parseInt(aangka2);
                 tvhasil.setText("hasil=" + (angka1 / angka2));
                 break;
-
+            case R.id.btnlogout:
+                sharedPreferences= getSharedPreferences("login",MODE_PRIVATE);
+                sharedPreferences.edit().clear().commit();
+                Intent in = new Intent(klakulator.this,MainActivity.class);
+                finish();
+                startActivity(in);
+                break;
         }
     }
 }

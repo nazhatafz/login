@@ -78,5 +78,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="hasil" />
+        android:text="hasil"
+        android:textSize="37dp"/>
+    <Button
+        android:id="@+id/btnlogout"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:text="logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 </LinearLayout>
