@@ -1,5 +1,6 @@
 package com.example.login;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -35,6 +36,11 @@ public class MainActivity extends AppCompatActivity {
                     in.putExtra("Email",txtemail.getText().toString());
                     startActivity(in);
                     finish();
+                }else {
+                    //jika login gagal
+                    AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+                    builder.setMessage("Username atau Password Anda salah!")
+                            .setNegativeButton("Retry", null).create().show();
                 }
             }
         });
