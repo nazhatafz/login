@@ -25,8 +25,8 @@ public class MainActivity extends AppCompatActivity {
         txtpassword = findViewById(R.id.txtpassword);
         angry_btn = findViewById(R.id.angry_btn);
         angry_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+                @Override
+                public void onClick(View v) {
                 if(txtemail.getText().toString().equalsIgnoreCase("Nazhat")||txtpassword.getText().toString().equalsIgnoreCase("nazhatimut")){
                     Toast.makeText(MainActivity.this, "login sukses", Toast.LENGTH_SHORT).show();
                     editor = pref.edit();
